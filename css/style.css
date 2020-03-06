@@ -180,8 +180,11 @@ input[type=submit]:hover {
 }
 
 .container {
-/* top | right | bottom | left */
-padding: 1em 17em 5em 17em;
+
+padding: 20px;
+width: 550px;
+margin-left: auto;
+margin-right: auto;
 }
 
 #home {
@@ -189,6 +192,7 @@ padding: 1em 17em 5em 17em;
 }
 
 #about{
+  /* top | right | bottom | left */
   padding: 1em 10em 0em 10em;
   text-align: center;
 }
