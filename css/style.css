@@ -1,0 +1,206 @@
+/** from w3 www.w3schools.com/howto/howto_css_dropdown.asp */
+body {
+font-family: "courier new";
+margin: auto;
+}
+
+img {
+  width: 35%;
+  align-items: center;
+  height: auto;
+}
+
+footer {
+  text-align: center;
+}
+
+hr {
+  border: 1px solid transparent;
+}
+
+h2 {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 300%;
+}
+.navbar {
+  overflow: hidden;
+  background-color: pink;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  font-size: 17px;
+  color: white;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+}
+/* Change the color of links on hover */
+#navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: pink;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#navbar-li {
+  float: left;
+}
+
+#navbar-li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navbar-li a:hover:not(.active) {
+  background-color: white;
+}
+
+.content {
+	padding: 15px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+/** https://www.w3schools.com/howto/howto_css_profile_card.asp **/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: "courier new";
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+/*** **/
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid black; /* border color */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 5px; /* Add a top margin */
+  margin-bottom: 15px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: black;
+}
+
+/* When moving the mouse over the submit button, add a purple color */
+input[type=submit]:hover {
+  background-color: pink;
+}
+
+/* Add a background color and some padding around the form */
+.contactform {
+  border-radius: 15px;
+  background-color: none;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.container {
+/* top | right | bottom | left */
+padding: 1em 17em 5em 17em;
+}
+
+#home {
+  text-align: center;
+}
+
+#about{
+  padding: 1em 10em 0em 10em;
+  text-align: center;
+}
+
+#resume{
+  text-align: center;
+  padding: 1em 10em 0em 10em;
+}
+
+#projects{
+  text-align: center;
+  padding: 1.5em 5em 0em 5em;
+}
+
+

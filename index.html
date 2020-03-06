@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TAMMY TRINH</title>
+	<meta charset="utf-8">
+	<!-- connect css sheet -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!--navigation bar from w3-->
+<ul id="navbar" style="opacity: 0.7;">
+	<li id="navbar-li"><a href="#home">Home</a></li>
+	<li id="navbar-li"><a href="#about">About Me</a></li>
+	<li id="navbar-li"><a href="#resume">Resume</a></li>
+	<li id="navbar-li"><a href="#projects">Projects</a></li>
+	<li id="navbar-li"><a href="#contact">Contact Me</a></li>
+</ul>
+
+<!--home-->
+<div id="home">
+	<hr><hr><hr><hr><hr><hr>
+	<h1>TAMMY TRINH</h1>
+	<p>Hey, Welcome to my site.</p>
+	<hr><hr>
+	<img style="border-radius: 50%" src="profile.jpg">
+</div>
+
+<!--about-->
+<div id="about">
+	<h2>About Me</h2>
+	<p>Hello! My name is Tammy.<br>I'm currently a <em>Junior</em> studying <em>Information Technology<em> at the <em>University of Washington.</em><br>I'm interested in <em>Cybersecurity<em>.</p>
+</div>
+
+<!--resume-->
+<div id="resume">
+	<h2>My Resume</h2>
+	<p>Check out my Resume!</p>
+
+	<form method="get" action="TAMMYTRINHRESUME.pdf">
+	<button class="button"><i class="fa fa-download"></i> View Resume</button>
+
+</form>
+</div>
+
+<!--projects-->
+<div id="projects">
+	<h2>Projects</h2>
+	<p>Poke n Roll Website<br>Oct 2019 - Dec 2019<br>Project Role: Project Manager</p>
+	<p style="font-size: 80%">My team created a website for a local Poke spot using WIX.<br> I was in charge of meetings, deadlines, and deliverables.</p>
+	<a href="https://pokenroll.wixsite.com/pokenroll">
+	<img src="pokenroll.gif" style="width: 60%"></a>
+</div>
+
+<!-- contact us -->
+<div id="contact">
+<div class="row">
+<div class="container">
+  <form action="https://formspree.io/xwkbydwn" method="post">
+    <h2>Contact Form</h3>
+    <p style="text-align: center;">Fill out this form with any questions or comments you have, I will get back to you within 2-3 business days!</p>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your first name...">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+
+    <label for="emailadd">Email Address</label>
+    <input type="text" id="emailadd" name="email" placeholder="Email Address...">
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something..." style="height:150px"></textarea>
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+</div>
+</div>
+
+<footer>
+	<div id="row">
+		<p> Copyright © 2020 BY TAMMY TRINH.</p>
+	</div>
+</footer>
+
+<!-- javascript -->
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
