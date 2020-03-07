@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>THANK YOU | TAMMY TRINH</title>
+	<meta charset="utf-8">
+	<!-- connect css sheet -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!--navigation bar from w3-->
+<ul id="navbar" style="opacity: 0.7;">
+	<li id="navbar-li"><a href="https://tamtrinhh.github.io/#home">Home</a></li>
+	<li id="navbar-li"><a href="https://tamtrinhh.github.io/#about">About Me</a></li>
+	<li id="navbar-li"><a href="https://tamtrinhh.github.io/#resume">Resume</a></li>
+	<li id="navbar-li"><a href="https://tamtrinhh.github.io/#projects">Projects</a></li>
+	<li id="navbar-li"><a href="https://tamtrinhh.github.io/#contact">Contact</a></li>
+</ul>
+
+<div style="padding: 0em 10em 10em 0em"></div>
+
+<!--home-->
+<div id="thanks" style="text-align: center;">
+	<hr><hr><hr><hr><hr><hr>
+	<h1>THANK YOU!</h1>
+	<p style="font-size: 110%">I've recieved your submission!</p>
+	<hr><hr>
+</div>
+
+<div style="padding: 15em 15em 0em 0em"></div>
+
+<footer>
+	<div id="row">
+		<a href="https://www.facebook.com/tammy.trinh.5"><img src="images/facebook.png" style="width: 35px"></a>
+		<a href="https://twitter.com/tammmytrinh"><img src="images/twitter.png" style="width: 35px"></a>
+		<a href="https://www.linkedin.com/in/tammy-trinh-63253b195/"><img src="images/linkedin.png" style="width: 35px"></a>
+		<a href="https://www.instagram.com/tammmytrinh/"><img src="images/instagram.png" style="width: 35px"></a>
+</div>
+	<div id="row">
+		<p> Copyright © 2020 BY TAMMY TRINH. All Rights Reserved</p>
+	</div>
+</footer>
+
+<!-- javascript -->
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
