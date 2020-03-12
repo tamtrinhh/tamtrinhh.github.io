@@ -37,7 +37,7 @@ h1 {
   text-align: center;
 }
 
-.navbar a {
+ul a {
   float: left;
   display: block;
   font-size: 17px;
@@ -47,7 +47,7 @@ h1 {
   text-decoration: none;
 }
 /* Change the color of links on hover */
-#navbar {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -58,11 +58,11 @@ h1 {
   width: 100%;
 }
 
-#navbar-li {
+li {
   float: left;
 }
 
-#navbar-li a {
+li a {
   display: block;
   color: black;
   text-align: center;
@@ -70,7 +70,7 @@ h1 {
   text-decoration: none;
 }
 
-#navbar-li a:hover:not(.active) {
+li a:hover:not(.active) {
   background-color: white;
 }
 
