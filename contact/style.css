@@ -103,9 +103,15 @@ button:hover, a:hover {
 
 /* Create two equal columns that floats next to each other */
 .column {
-float: left;
-width: 50%;
-padding-right: 120px;
-padding-left: 120px;
+  float: left;
+  width: 50%;
+  padding-right: 120px;
+  padding-left: 120px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
