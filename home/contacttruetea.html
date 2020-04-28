@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TRUETEA</title>
+  <!--connect css sheet-->
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+  <img class="logo" src="truetea.png">
+
+  <!--navigation bar from w3-->
+  <ul class="nav">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="team.html">About</a></li>
+    <li><a href="tamtrinhh.github.io/contacttruetea.html">Contact</a></li>
+  </ul>
+  <!--slide show-->
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="tree.png" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="layout.png" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="boba.png" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+
+      <!--Contact Form from W3 -->
+      <div class="container" style="text-align: center;">
+        <p>Sign up for our Emails!</p>
+        <form action="https://formkeep.com/f/4a02d740e634"
+        accept-charset="UTF-8"
+        enctype="multipart/form-data"
+        method="POST">
+
+        <input type="text" id="emailadd" name="email" placeholder="Email Address" required style="max-width: 300px">
+        <input type="submit" value="Submit" style="text-align: center;">
+      </form>
+    </div>
+
+</body>
+<footer>  
+  <div id="row" style="text-align: center; font-size: 90%; padding: 0px">
+    <p>10216 ST 256th St<br>Kent, WA 98030</p>
+    <p>Phone: (253)-277-1515</p>
+    <p>HOURS:<br>
+    MON-SUN: 12PM-7PM</p>
+  </div>
+  <div id="row" style="display: flex; justify-content: center;">
+    <a href="https://www.facebook.com/tammy.trinh.5"><img src="facebook.png" alt="facebook" style="width: 35px"></a>
+    <a href="https://twitter.com/tammmytrinh"><img src="yelp.png" alt="yelp" style="width: 35px"></a>
+    <a href="https://www.instagram.com/tammmytrinh/"><img src="instagram.png" alt="instagram" style="width: 35px"></a>
+</div>
+<br>
+
+</footer>
+
+  <!--javascript for slideshow-->
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+  //alert('showslides('+ n +')\nslideIndex='+slideIndex);
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n==undefined){n = ++slideIndex}
+    if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+
+  setTimeout(showSlides, 3000); // Change image every 5 seconds
+}
+
+
+</script>
+
+</html>
