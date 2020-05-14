@@ -53,9 +53,13 @@
       <!--Contact Form from W3 -->
       <div class="container" style="text-align: center;">
         <p>Sign up for our Emails!</p>
-        <form name="submit-to-google-sheet">
-          <input type="text" name="email" placeholder="Email Address" required style="max-width: 300px">
-          <input type="submit" value="Submit" id="submit-form" style="text-align: center;">
+        <form action="https://formkeep.com/f/4a02d740e634"
+        accept-charset="UTF-8"
+        enctype="multipart/form-data"
+        method="POST">
+
+        <input type="text" id="emailadd" name="email" placeholder="Email Address" required style="max-width: 300px">
+        <input type="submit" value="Submit" style="text-align: center;">
       </form>
     </div>
 
@@ -106,18 +110,8 @@
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
 
-setTimeout(showSlides, 3000); // Change image every 5 seconds
-
-//google sheets
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxJB3MOfkTt1JJh9eo9O_YTiqXuTHK2yI9GP7lSAN1UxBeujo5S/exec'
-  const form = document.forms['submit-to-google-sheet']
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
+  setTimeout(showSlides, 3000); // Change image every 5 seconds
+}
 
 
 </script>
