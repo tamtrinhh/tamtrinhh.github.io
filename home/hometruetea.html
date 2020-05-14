@@ -54,12 +54,8 @@
       <div class="container" style="text-align: center;">
         <p>Sign up for our Emails!</p>
         <form id="test-form" >
-          <div>
-            <input type="text" name="email" placeholder="Email Address" required style="max-width: 300px">
-          </div>
-          <div>
-            <input type="submit" value="Submit" id="submit-form" style="text-align: center;">
-          </div>
+          <input type="text" name="email" placeholder="Email Address" required style="max-width: 300px">
+          <input type="submit" value="Submit" id="submit-form" style="text-align: center;">
       </form>
     </div>
 
@@ -113,21 +109,15 @@
 setTimeout(showSlides, 3000); // Change image every 5 seconds
 
 //google sheets
-  var $form = $('form#test-form'),
-    url = 'https://script.google.com/macros/s/AKfycbxJB3MOfkTt1JJh9eo9O_YTiqXuTHK2yI9GP7lSAN1UxBeujo5S/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxJB3MOfkTt1JJh9eo9O_YTiqXuTHK2yI9GP7lSAN1UxBeujo5S/exec'
+  const form = document.forms['submit-to-google-sheet']
 
-$('#submit-form').on('click', function(e) {
-  e.preventDefault();
-  var jqxhr = $.ajax({
-    url: url,
-    method: "GET",
-    dataType: "json",
-    data: $form.serializeObject()
-  }).success(
-    // do something
-  );
-})
-}
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
 
 
 </script>
