@@ -53,10 +53,7 @@
       <!--Contact Form from W3 -->
       <div class="container" style="text-align: center;">
         <p>Sign up for our Emails!</p>
-        <form action="https://formkeep.com/f/4a02d740e634"
-        accept-charset="UTF-8"
-        enctype="multipart/form-data"
-        method="POST">
+        <form id="test-form" >
 
         <input type="text" id="emailadd" name="email" placeholder="Email Address" required style="max-width: 300px">
         <input type="submit" value="Submit" style="text-align: center;">
@@ -110,7 +107,23 @@
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
 
-  setTimeout(showSlides, 3000); // Change image every 5 seconds
+setTimeout(showSlides, 3000); // Change image every 5 seconds
+
+//google sheets
+  var $form = $('form#test-form'),
+    url = 'https://script.google.com/macros/s/AKfycbxGj05W45LAlIESzIlltXsmgNIm_9_G-Ay3Cfl3KHznXfd0jPs/exec'
+
+$('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    // do something
+  );
+})
 }
 
 
