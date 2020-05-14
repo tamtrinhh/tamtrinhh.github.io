@@ -101,18 +101,6 @@
 
   setTimeout(showSlides, 3000); // Change image every 5 seconds
 }
-//google sheets
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbz6nx-Bbsu4Zg4q5GU5EG1uzFes5zTGc6qJZrp94nZ1mLPE_6E7/exec'
-  const form = document.forms['submit-to-google-sheet']
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    window.location.href="http://www.google.com";
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
-  
 
 
 </script>
