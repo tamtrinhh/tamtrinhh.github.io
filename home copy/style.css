@@ -1,0 +1,213 @@
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin: 0;
+}
+
+img {
+  align-items: center;
+  height: auto;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+hr {
+  width: 25%;
+  height: .5px;
+  position: center fixed;
+
+}
+
+h2 {
+  text-align: center;
+  font-size: 250%;
+}
+/************ from w3 sticky navigation ************/
+.nav{
+  list-style:none;
+  text-align:center;
+  background-color: transparent;
+  padding-top: 10px;
+}
+
+li {
+  margin-right: 30px;
+  display: inline-block;
+}
+
+.nav li{
+  display:inline;
+}
+.nav a{
+  color:black;
+  font-size: 150%;
+}
+
+.nav a:hover {
+  color:pink;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid pink;
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  margin-top: 5px; /* Add a top margin */
+  margin-bottom: 15px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  min-width: 250px;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* When moving the mouse over the submit button, add a purple color */
+input[type=submit]:hover {
+  background-color: lightgreen;
+  color: white;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 10px;
+  background-color: none;
+  padding: 25px;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+/** https://www.w3schools.com/howto/howto_css_three_columns.asp **/
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding-right: 120px;
+  padding-left: 120px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo {
+  width: 20%;
+  align-items: center;
+  padding-top: 25px;
+  padding-right: 20px;
+}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
