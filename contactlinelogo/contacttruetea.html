@@ -31,10 +31,7 @@
 
       <!--Contact Form from W3 -->
       <div class="container">
-        <form action="https://formkeep.com/f/4a02d740e634"
-        accept-charset="UTF-8"
-        enctype="multipart/form-data"
-        method="POST">
+        <form name="google-sheets">
         <label for="name">Name*</label>
         <input type="text" id="name" name="name" required>
 
@@ -42,7 +39,7 @@
         <input type="text" id="emailadd" name="email"  required>
 
         <label for="phonenum">Phone Number</label>
-        <input type="text" id="phone" name="phone" >
+        <input type="text" id="phone" name="phone" maxlength="10" >
 
         <label for="message">Message*</label>
         <textarea id="message" name="message" style="height:100px;" required></textarea>
@@ -59,4 +56,19 @@
 </div>
 
 </body>
+<script>
+
+  //google sheets
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwz-HOh_btzJa6Isjp267m89D3AvSi_XoPST8ZD5_Wn9aQ0A0Y/exec'
+  const form = document.forms['google-sheets']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => window.location.href="contactrecieve.html")
+      .catch(error => console.error('Error!', error.message))
+  })
+
+</script>
 </html>
