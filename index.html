@@ -60,7 +60,7 @@
 	<p>TrueTea<br>April 2020 - June 2020<br>Project Role: Database Designer</p>
 	<p style="font-size: 80%">My team created a website for a local Boba shop located in Kent. <br>I created the Home page, and contact page, providing a simple and sleek interface for the customer. <br>We used google sheets to collect submitted data.</p>
 	<a href="https://tamtrinhh.github.io/home/hometruetea.html">
-	<img src="images/truetea.gif" alt="truetea" style="width: 70%"></a>
+	<img src="images/truetea.gif" alt="truetea" style="width: 65%"></a>
 	<hr>
 
 </div>
@@ -72,19 +72,18 @@
 
   	<h2>Contact Form</h2>
     <p style="text-align: center;">Fill out this form with any questions or comments you have, I will get back to you within 2-3 business days!</p>
+    <form name="google-sheets">
+    	<hr>
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" required>
 
-    <!-- <form name="google-sheets">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name">
+        <label for="emailadd">Email Address*</label>
+        <input type="text" id="emailadd" name="email"  required>
 
-    <label for="emailadd">Email Address</label>
-    <input type="text" id="emailadd" name="email">
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" style="height:150px"></textarea>
-    <input type="submit" value="Submit">
-  </form> -->
-  
+        <label for="message">Message*</label>
+        <textarea id="message" name="message" style="height:125px;" required></textarea>
+        <input type="submit" value="Submit">
+    </form>
 </div>
 </div>
 </div>
@@ -102,6 +101,18 @@
 
 <!-- javascript -->
 <script>
+  //google sheets
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyflLSyUVG7THxAvgKsOsj44k4RbDTrp9FdLWp1IdlgugzYAL4/exec'
+  const form = document.forms['google-sheets']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => window.location.href="https://google.com")
+      .catch(error => console.error('Error!', error.message))
+  })
+	
 window.onscroll = function() {myFunction()};
 
 var navbar = document.getElementById("navbar");
@@ -114,6 +125,9 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+
+
 </script>
 
 </body>
