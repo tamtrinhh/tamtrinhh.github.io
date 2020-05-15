@@ -111,9 +111,9 @@
 
   form.addEventListener('submit', e => {
     e.preventDefault()
-    window.location.href="hometrueteamsignup.html";
+
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
+      .then(response => window.location.href="hometrueteamsignup.html")
       .catch(error => console.error('Error!', error.message))
   })
   
