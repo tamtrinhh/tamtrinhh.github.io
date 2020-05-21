@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TRUETEA</title>
+  <!--connect css sheet-->
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+  <img class="logo" src="images/truetea.png">
+
+  <!--navigation bar from w3-->
+ <ul class="nav">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <!--slide show-->
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="images/tree.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/layout.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/boba.png" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+
+
+    <div class="container">
+      <p style="font-size: 125%; text-align: center;">Check out our Instagram Feed! </p>
+      <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+      <div class="elfsight-app-ffe2dafe-f793-4efc-bc7b-8461add1df99"></div>
+    </div>
+
+          <!--Contact Form from W3 -->
+      <div class="container" style="text-align: center;">
+        <p style="font-size: 125%;">Sign up for our Emails!</p>
+        <form name="submit-to-google-sheet">
+          <input type="text" id="emailadd" name="email" placeholder="Email Address" required style="max-width: 300px">
+          <input type="submit" value="Submit" style="text-align: center;">
+        </form>
+    </div>
+</body>
+
+<footer>  
+  <div id="row" style="text-align: center; font-size: 90%; padding: 0px">
+    <p>10216 ST 256th St<br>Kent, WA 98030</p>
+    <p>Phone: (253)-277-1515</p>
+    <p>HOURS:<br>
+    MON-SUN: 12PM-7PM</p>
+  </div>
+  <div id="row" style="display: flex; justify-content: center;">
+    <a href="https://www.facebook.com/truetea.seattle/"><img src="images/facebook.png" alt="facebook" style="width: 45px; padding-right: 10px"></a>
+    <a href="https://www.yelp.com/biz/truetea-kent"><img src="images/yelp.png" alt="yelp" style="width: 45px; padding-right: 10px;"></a>
+    <a href="https://www.instagram.com/truetea.cafe/"><img src="images/instagram.png" alt="instagram" style="width: 45px; padding-right: 10px;"></a>
+</div>
+<br>
+
+</footer>
+
+  <!--javascript for slideshow-->
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+  //alert('showslides('+ n +')\nslideIndex='+slideIndex);
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n==undefined){n = ++slideIndex}
+    if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+
+  setTimeout(showSlides, 3000); // Change image every 5 seconds
+}
+//google sheets
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbz6nx-Bbsu4Zg4q5GU5EG1uzFes5zTGc6qJZrp94nZ1mLPE_6E7/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => window.location.href="hometrueteamsignup.html")
+      .catch(error => console.error('Error!', error.message))
+  })
+  
+  
+</script>
+
+</html>
